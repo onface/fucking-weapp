@@ -1,0 +1,12 @@
+.bg-offline {
+    width: 100rpx;
+    height:100rpx;
+    border:1px solid blue;
+    background:url("./onface.png");
+}
+.bg-online {
+    width: 100rpx;
+    height:100rpx;
+    border:1px solid orange;
+    background:url("https://avatars1.githubusercontent.com/u/20395258?s=200&v=4");
+}

@@ -1,0 +1,5 @@
+<view>
+    <view class="bg-offline" ></view>
+    <view class="bg-online"></view>
+    <view class="bg-inline" style="background-image:url('./onface.png');"></view>
+</view>

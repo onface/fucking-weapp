@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/background/index",
     "pages/betterPicker/index",
     "pages/picker/index"
   ],

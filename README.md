@@ -8,6 +8,7 @@
 
 - [requestAnimationFrame](#requestanimationframe)
 - [picker](#picker)
+- [background-image](#background-image)
 
 ## requestAnimationFrame
 
@@ -160,3 +161,63 @@ module.exports = function (data, value) {
 这样既能兼容老接口支持已经上线的 `value` `bindchange` 又能让接口更友好。
 
 但是请看[表情包:大图预警](https://github.com/onface/fucking-weapp/issues/1#issuecomment-395348717)
+
+## background-image
+
+> 本地资源图片无法通过 WXSS 获取，可以使用网络图片，或者 base64，或者使用<image/>标签。请参考文档
+  [本地资源无法通过 wxss 获取](https://developers.weixin.qq.com/miniprogram/dev/qa.html#本地资源无法通过-wxss-获取)
+
+
+
+```html
+<view class="bg-offline" ></view>
+<view class="bg-online"></view>
+```
+
+```css
+.bg-offline {
+    width: 100rpx;
+    height:100rpx;
+    border:1px solid blue;
+    background:url("./onface.png"); /* 此行代码会导致 报错本地资源图片无法通过 WXSS 获取 */
+}
+.bg-online {
+    width: 100rpx;
+    height:100rpx;
+    border:1px solid orange;
+    background:url("https://avatars1.githubusercontent.com/u/20395258?s=200&v=4");
+}
+
+```
+
+### 伪解决方法
+
+**不要使用这种方式**
+
+通过行内样式实现 `style="background-image:url('./onface.png');"`
+
+```html
+<view class="bg-inline" style="background-image:url('./onface.png');"></view>
+```
+
+```css
+.bg-inline {
+    width: 100rpx;
+    height:100rpx;
+    border:1px solid black;
+}
+```
+
+模拟器可以的，但是真机不行，所以不要使用这种方式。
+
+> 又出现了模拟器可以真机不行的情况。就问你惊不惊喜，意不意外？
+
+### 吐槽
+
+`<image />` 无论是远程图片还是本地图片都可以获取，`wxss` 却不能，你这不是作吗？
+
+猜测本意是让非内容的图片资源通过网络加载，内容的图片资源打包在小程序里。这样能让用户打开小程序更快。但是你就不能编译的时候匹配 `background` 加载的本地图片，全部改为微信在线地址吗？难道是怕这点静态资源把腾讯云拖垮？
+
+所以呢。还是老老实实用网络图片吧。
+
+[表情包:大图预警](https://github.com/onface/fucking-weapp/issues/1#issuecomment-395367477)
