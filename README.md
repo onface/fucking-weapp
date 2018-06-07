@@ -36,6 +36,10 @@ if (typeof wx !== 'undefined' && wx.request !== 'undefined') {
 8. 就只能每个地方都写这种东西
 9. 才可以维持得了生活这样子
 
-[表情包](https://github.com/onface/fucking-weapp/issues/1#issue-330167725)
+<details>
+<summary>表情包（1.4MB）</summary>
+![requestanimationframe](https://user-images.githubusercontent.com/3949015/41087577-a8512658-6a6f-11e8-927d-04409c2502c0.gif)
+
+</details>
 
 **要不就模拟器也不支持，模拟器支持，真机不支持。那要模拟器干什么呢？**
