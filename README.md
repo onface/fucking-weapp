@@ -38,8 +38,7 @@ if (typeof wx !== 'undefined' && wx.request !== 'undefined') {
 
 <details>
 <summary>表情包（1.4MB）</summary>
-![requestanimationframe](https://user-images.githubusercontent.com/3949015/41087577-a8512658-6a6f-11e8-927d-04409c2502c0.gif)
-
+<img src="https://user-images.githubusercontent.com/3949015/41087577-a8512658-6a6f-11e8-927d-04409c2502c0.gif" alt="不支持全局变量" />
 </details>
 
 **要不就模拟器也不支持，模拟器支持，真机不支持。那要模拟器干什么呢？**
