@@ -1,0 +1,9 @@
+<wxs src="./valueToIndex.wxs" module="valueToIndex" />
+<view>
+  <picker bindchange="bindPickerChange" value="{{valueToIndex(array, value)}}" range="{{array}}">
+    <button>
+      当前选择：{{array[valueToIndex(array, value)]}}  value: {{value}} index:{{valueToIndex(array, value)}}
+    </button>
+  </picker>
+  <button bindtap="bindChangeArray" >修改 array</button>
+</view>

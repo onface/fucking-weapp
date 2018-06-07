@@ -1,0 +1,9 @@
+module.exports = function (data, value) {
+    var index = data.indexOf(value)
+    if (index === -1) {
+        return ''
+    }
+    else {
+        return index
+    }
+}

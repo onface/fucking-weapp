@@ -1,0 +1,8 @@
+<view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <button>
+      当前选择：{{array[index]}} : {{index}}
+    </button>
+  </picker>
+  <button bindtap="bindChangeArray" >修改 array</button>
+</view>
