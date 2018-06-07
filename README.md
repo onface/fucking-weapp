@@ -33,3 +33,5 @@ if (typeof wx !== 'undefined' && wx.request !== 'undefined') {
 9. 才可以维持得了生活这样子
 
 [表情包](https://github.com/onface/fucking-weapp/issues/1#issue-330167725)
+
+**要不就模拟器也不支持，模拟器支持，真机不支持。那要模拟器干什么呢？**
